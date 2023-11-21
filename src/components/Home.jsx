@@ -12,14 +12,14 @@ function Home() {
     const copyref = useRef(null)
 
     const generatecode = async () => {
-        const res = await axios.post("http://localhost:3000/user/generate", { username: user })
+        const res = await axios.post("https://referral-system-backend-theta.vercel.app/user/generate", { username: user })
         console.log(res);
         setcode(res.data.data.referralcode)
     }
 
     const getdata = async () => {
         if (login) {
-            const res = await axios.post("http://localhost:3000/user/getdata", { username: user })
+            const res = await axios.post("https://referral-system-backend-theta.vercel.app/user/getdata", { username: user })
             console.log(res);
             setdata(res.data.data.data)
         }

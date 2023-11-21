@@ -18,7 +18,7 @@ function Login() {
         setloding(true)
         e.preventDefault()
 
-        const res = await axios.post("http://localhost:3000/user/login", { username: username, password: password });
+        const res = await axios.post("https://referral-system-backend-theta.vercel.app/user/login", { username: username, password: password });
         console.log(res);
         if (res.data.data.sucess) {
             setlogin(true);
